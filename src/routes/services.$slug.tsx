@@ -7,7 +7,7 @@ import { getService, services } from "@/data/services";
 import { processSteps } from "@/data/site";
 
 export const Route = createFileRoute("/services/$slug")({
-  loader: ({ params }) => {
+  loader: async ({ params }) => {
     const service = getService(params.slug);
     if (!service) throw notFound();
     return { service };

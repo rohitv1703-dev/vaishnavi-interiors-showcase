@@ -5,7 +5,7 @@ import { getProject, related } from "@/data/projects";
 import { waWith } from "@/data/site";
 
 export const Route = createFileRoute("/portfolio/$slug")({
-  loader: ({ params }) => {
+  loader: async ({ params }) => {
     const project = getProject(params.slug);
     if (!project) throw notFound();
     return { project };
