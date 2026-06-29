@@ -1,23 +1,23 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 
-import img1 from "@/assets/interior-231640.png.asset.json";
-import img2 from "@/assets/interior-231654.png.asset.json";
-import img3 from "@/assets/interior-231708.png.asset.json";
-import img4 from "@/assets/interior-231757.png.asset.json";
-import img5 from "@/assets/interior-231820.png.asset.json";
-import img6 from "@/assets/interior-231831.png.asset.json";
-import img7 from "@/assets/interior-231848.png.asset.json";
-import img8 from "@/assets/interior-231901.png.asset.json";
-import img9 from "@/assets/interior-231927.png.asset.json";
-import img10 from "@/assets/interior-232001.png.asset.json";
-import img11 from "@/assets/interior-232018.png.asset.json";
-import img12 from "@/assets/interior-232032.png.asset.json";
-import img13 from "@/assets/interior-232054.png.asset.json";
-import img14 from "@/assets/interior-232107.png.asset.json";
-import img15 from "@/assets/interior-232122.png.asset.json";
-import img16 from "@/assets/interior-232135.png.asset.json";
-import img17 from "@/assets/interior-232232.png.asset.json";
+import img1 from "@/assets/interior-231640.png";
+import img2 from "@/assets/interior-231654.png";
+import img3 from "@/assets/interior-231708.png";
+import img4 from "@/assets/interior-231757.png";
+import img5 from "@/assets/interior-231820.png";
+import img6 from "@/assets/interior-231831.png";
+import img7 from "@/assets/interior-231848.png";
+import img8 from "@/assets/interior-231901.png";
+import img9 from "@/assets/interior-231927.png";
+import img10 from "@/assets/interior-232001.png";
+import img11 from "@/assets/interior-232018.png";
+import img12 from "@/assets/interior-232032.png";
+import img13 from "@/assets/interior-232054.png";
+import img14 from "@/assets/interior-232107.png";
+import img15 from "@/assets/interior-232122.png";
+import img16 from "@/assets/interior-232135.png";
+import img17 from "@/assets/interior-232232.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -30,7 +30,7 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:title", content: "Vaishnavi Interiors | Premium Interior Designer in Vasai" },
       { property: "og:description", content: "Crafting beautiful living spaces in Vasai. 4.8★ Google rated. 22+ happy clients." },
-      { property: "og:image", content: img7.url },
+      { property: "og:image", content: img7 },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -41,7 +41,7 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
           name: "Vaishnavi Interiors",
-          image: img7.url,
+          image: img7,
           telephone: "+91 95793 22314",
           priceRange: "₹₹",
           address: {
@@ -66,23 +66,23 @@ const WHATSAPP = `https://wa.me/${PHONE}?text=${encodeURIComponent("Hi Vaishnavi
 const TEL = `tel:+${PHONE}`;
 
 const projects = [
-  { src: img1.url, title: "Carved Wooden Safety Door", category: "Safety Door", location: "Vasai East" },
-  { src: img7.url, title: "Cinematic Living Room", category: "Living Room", location: "Vasai" },
-  { src: img6.url, title: "Walnut TV Unit & Cove Lighting", category: "TV Unit", location: "Vasai" },
-  { src: img2.url, title: "Fluted Wall Panelling", category: "Wall Design", location: "Vasai East" },
-  { src: img10.url, title: "Floating Shelf TV Console", category: "TV Unit", location: "Nalasopara" },
-  { src: img5.url, title: "Modular Kitchen — Aubergine Gloss", category: "Modular Kitchen", location: "Vasai" },
-  { src: img3.url, title: "CNC Carved Wardrobe", category: "Wardrobe", location: "Vasai" },
-  { src: img4.url, title: "Sliding Bedroom Wardrobe", category: "Wardrobe", location: "Vasai East" },
-  { src: img8.url, title: "4-Door Wardrobe + Vanity", category: "Bedroom", location: "Nalasopara" },
-  { src: img9.url, title: "Kids Room — Themed Wardrobe", category: "Kids Room", location: "Vasai" },
-  { src: img11.url, title: "Framed Wall Art & Accent Cladding", category: "Wall Design", location: "Vasai" },
-  { src: img12.url, title: "Temple Unit with 3D Cladding", category: "Pooja Room", location: "Vasai East" },
-  { src: img13.url, title: "Custom Study & Workstation", category: "Study Room", location: "Nalasopara" },
-  { src: img14.url, title: "Bespoke Bed with Storage", category: "Bedroom", location: "Vasai" },
-  { src: img15.url, title: "Solid Wood Storage Console", category: "Furniture", location: "Vasai" },
-  { src: img16.url, title: "Designer Entry Door — Mandala", category: "Safety Door", location: "Vasai East" },
-  { src: img17.url, title: "Minimal Sliding Wardrobe", category: "Wardrobe", location: "Nalasopara" },
+  { src: img1, title: "Carved Wooden Safety Door", category: "Safety Door", location: "Vasai East" },
+  { src: img7, title: "Cinematic Living Room", category: "Living Room", location: "Vasai" },
+  { src: img6, title: "Walnut TV Unit & Cove Lighting", category: "TV Unit", location: "Vasai" },
+  { src: img2, title: "Fluted Wall Panelling", category: "Wall Design", location: "Vasai East" },
+  { src: img10, title: "Floating Shelf TV Console", category: "TV Unit", location: "Nalasopara" },
+  { src: img5, title: "Modular Kitchen — Aubergine Gloss", category: "Modular Kitchen", location: "Vasai" },
+  { src: img3, title: "CNC Carved Wardrobe", category: "Wardrobe", location: "Vasai" },
+  { src: img4, title: "Sliding Bedroom Wardrobe", category: "Wardrobe", location: "Vasai East" },
+  { src: img8, title: "4-Door Wardrobe + Vanity", category: "Bedroom", location: "Nalasopara" },
+  { src: img9, title: "Kids Room — Themed Wardrobe", category: "Kids Room", location: "Vasai" },
+  { src: img11, title: "Framed Wall Art & Accent Cladding", category: "Wall Design", location: "Vasai" },
+  { src: img12, title: "Temple Unit with 3D Cladding", category: "Pooja Room", location: "Vasai East" },
+  { src: img13, title: "Custom Study & Workstation", category: "Study Room", location: "Nalasopara" },
+  { src: img14, title: "Bespoke Bed with Storage", category: "Bedroom", location: "Vasai" },
+  { src: img15, title: "Solid Wood Storage Console", category: "Furniture", location: "Vasai" },
+  { src: img16, title: "Designer Entry Door — Mandala", category: "Safety Door", location: "Vasai East" },
+  { src: img17, title: "Minimal Sliding Wardrobe", category: "Wardrobe", location: "Nalasopara" },
 ];
 
 const services = [
@@ -276,7 +276,7 @@ function Index() {
       {/* Hero */}
       <section id="home" className="relative min-h-[100svh] flex items-center">
         <div className="absolute inset-0">
-          <img src={img7.url} alt="Premium living room interior by Vaishnavi Interiors in Vasai" className="absolute inset-0 w-full h-full object-cover" />
+          <img src={img7} alt="Premium living room interior by Vaishnavi Interiors in Vasai" className="absolute inset-0 w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-b from-[#0B0B0B]/85 via-[#0B0B0B]/55 to-[#0B0B0B]" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,#0B0B0B_85%)]" />
         </div>
@@ -340,16 +340,16 @@ function Index() {
           </div>
           <div className="reveal grid grid-cols-6 grid-rows-6 gap-3 h-[460px] md:h-[560px]">
             <div className="col-span-4 row-span-4 overflow-hidden">
-              <img src={img7.url} alt="Living room" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1.2s]" />
+              <img src={img7} alt="Living room" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1.2s]" />
             </div>
             <div className="col-span-2 row-span-3 overflow-hidden">
-              <img src={img1.url} alt="Door" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1.2s]" />
+              <img src={img1} alt="Door" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1.2s]" />
             </div>
             <div className="col-span-2 row-span-3 overflow-hidden">
-              <img src={img3.url} alt="Wardrobe" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1.2s]" />
+              <img src={img3} alt="Wardrobe" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1.2s]" />
             </div>
             <div className="col-span-4 row-span-2 overflow-hidden">
-              <img src={img5.url} alt="Kitchen" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1.2s]" />
+              <img src={img5} alt="Kitchen" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[1.2s]" />
             </div>
           </div>
         </div>
