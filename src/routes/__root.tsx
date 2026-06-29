@@ -11,12 +11,16 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { FloatingCTA } from "@/components/FloatingCTA";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-7xl font-bold text-foreground">404</h1>
+        <h1 className="font-display text-7xl gold-gradient-text">404</h1>
         <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
         <p className="mt-2 text-sm text-muted-foreground">
           The page you're looking for doesn't exist or has been moved.
@@ -24,7 +28,7 @@ function NotFoundComponent() {
         <div className="mt-6">
           <Link
             to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="inline-flex items-center justify-center border border-gold text-gold px-5 py-3 text-xs tracking-[0.25em] uppercase hover:bg-gold hover:text-[#0B0B0B] transition-colors"
           >
             Go home
           </Link>
@@ -56,16 +60,16 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
               router.invalidate();
               reset();
             }}
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="inline-flex items-center justify-center border border-gold text-gold px-5 py-3 text-xs tracking-[0.25em] uppercase hover:bg-gold hover:text-[#0B0B0B] transition-colors"
           >
             Try again
           </button>
-          <a
-            href="/"
-            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+          <Link
+            to="/"
+            className="inline-flex items-center justify-center border border-white/15 text-white px-5 py-3 text-xs tracking-[0.25em] uppercase"
           >
             Go home
-          </a>
+          </Link>
         </div>
       </div>
     </div>
@@ -82,12 +86,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Vaishnavi Interiors offers luxury home interiors, modular kitchens, furniture, wardrobes, office interiors, and renovation services in Vasai. Trusted by customers with a 4.8-star rating.",
+          "Luxury home interiors, modular kitchens, wardrobes, furniture, false ceiling, safety doors, office interiors and renovation in Vasai. 4.8★ Google rated.",
       },
-      { name: "keywords", content: "Interior Designer Vasai, Interior Designer Nalasopara, Modular Kitchen Vasai, Furniture Vasai, Wardrobe Design, Home Interior, Luxury Interior Design, Office Interior, Safety Door, False Ceiling, Renovation Services" },
+      {
+        name: "keywords",
+        content:
+          "Interior Designer Vasai, Interior Designer Nalasopara, Modular Kitchen Vasai, Wardrobe Design, Luxury Interior, Office Interior, Safety Door, False Ceiling, Renovation",
+      },
       { property: "og:site_name", content: "Vaishnavi Interiors" },
-      { property: "og:title", content: "Vaishnavi Interiors | Premium Interior Designer in Vasai" },
-      { property: "og:description", content: "Luxury interiors, modular kitchens, wardrobes, furniture and renovation in Vasai. 4.8★ rated." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -98,6 +104,33 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "Vaishnavi Interiors",
+          telephone: "+91 95793 22314",
+          priceRange: "₹₹",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress:
+              "Shop No.11, Shubham Building, Near KK Hospital, Opp. Shanti Lifespaces, Yashvant Viva Township",
+            addressLocality: "Vasai East",
+            addressRegion: "Maharashtra",
+            postalCode: "401208",
+            addressCountry: "IN",
+          },
+          areaServed: ["Vasai", "Vasai East", "Vasai West", "Nalasopara", "Virar", "Naigaon"],
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "4.8",
+            reviewCount: "22",
+          },
+        }),
       },
     ],
   }),
@@ -126,8 +159,13 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <ScrollToTop />
+      <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+        <Header />
+        <Outlet />
+        <Footer />
+        <FloatingCTA />
+      </div>
     </QueryClientProvider>
   );
 }
