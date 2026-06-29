@@ -112,7 +112,7 @@ function ServicePage() {
               {service.intro}
             </p>
             <ul className="mt-10 grid sm:grid-cols-2 gap-x-8 gap-y-3 text-sm">
-              {service.bullets.map((b) => (
+              {service.bullets.map((b: string) => (
                 <li key={b} className="flex items-start gap-3 text-white/85">
                   <span className="text-gold mt-0.5">✓</span> {b}
                 </li>

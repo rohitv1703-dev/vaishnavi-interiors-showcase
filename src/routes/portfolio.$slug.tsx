@@ -120,7 +120,7 @@ function ProjectPage() {
             <div className="mt-8">
               <div className="text-[10px] tracking-[0.3em] uppercase text-gold">Materials</div>
               <ul className="mt-3 space-y-2 text-sm text-white/85">
-                {project.materials.map((m) => (
+                {project.materials.map((m: string) => (
                   <li key={m} className="flex items-start gap-2">
                     <span className="text-gold mt-1">·</span> {m}
                   </li>
