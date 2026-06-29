@@ -4,7 +4,7 @@ import { Breadcrumbs, SectionHeading } from "@/components/SectionHeading";
 import { CostCalculator } from "@/components/CostCalculator";
 import { services } from "@/data/services";
 
-export const Route = createFileRoute("/services")({
+export const Route = createFileRoute("/services/")({
   head: () => ({
     meta: [
       { title: "Interior Design Services in Vasai — Vaishnavi Interiors" },

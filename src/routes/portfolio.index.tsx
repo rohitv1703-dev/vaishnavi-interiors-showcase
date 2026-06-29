@@ -4,7 +4,7 @@ import { useReveal } from "@/components/Reveal";
 import { Breadcrumbs, SectionHeading } from "@/components/SectionHeading";
 import { projects, categories } from "@/data/projects";
 
-export const Route = createFileRoute("/portfolio")({
+export const Route = createFileRoute("/portfolio/")({
   head: () => ({
     meta: [
       { title: "Portfolio — Vaishnavi Interiors Vasai" },
