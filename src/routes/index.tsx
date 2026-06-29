@@ -11,6 +11,13 @@ import img7 from "@/assets/interior-231848.png.asset.json";
 import img8 from "@/assets/interior-231901.png.asset.json";
 import img9 from "@/assets/interior-231927.png.asset.json";
 import img10 from "@/assets/interior-232001.png.asset.json";
+import img11 from "@/assets/interior-232018.png.asset.json";
+import img12 from "@/assets/interior-232032.png.asset.json";
+import img13 from "@/assets/interior-232054.png.asset.json";
+import img14 from "@/assets/interior-232107.png.asset.json";
+import img15 from "@/assets/interior-232122.png.asset.json";
+import img16 from "@/assets/interior-232135.png.asset.json";
+import img17 from "@/assets/interior-232232.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -69,6 +76,13 @@ const projects = [
   { src: img4.url, title: "Sliding Bedroom Wardrobe", category: "Wardrobe", location: "Vasai East" },
   { src: img8.url, title: "4-Door Wardrobe + Vanity", category: "Bedroom", location: "Nalasopara" },
   { src: img9.url, title: "Kids Room — Themed Wardrobe", category: "Kids Room", location: "Vasai" },
+  { src: img11.url, title: "Framed Wall Art & Accent Cladding", category: "Wall Design", location: "Vasai" },
+  { src: img12.url, title: "Temple Unit with 3D Cladding", category: "Pooja Room", location: "Vasai East" },
+  { src: img13.url, title: "Custom Study & Workstation", category: "Study Room", location: "Nalasopara" },
+  { src: img14.url, title: "Bespoke Bed with Storage", category: "Bedroom", location: "Vasai" },
+  { src: img15.url, title: "Solid Wood Storage Console", category: "Furniture", location: "Vasai" },
+  { src: img16.url, title: "Designer Entry Door — Mandala", category: "Safety Door", location: "Vasai East" },
+  { src: img17.url, title: "Minimal Sliding Wardrobe", category: "Wardrobe", location: "Nalasopara" },
 ];
 
 const services = [
