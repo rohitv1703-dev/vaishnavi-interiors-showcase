@@ -4,9 +4,6 @@ import heroImg from "@/assets/interior-231848.jpg";
 import img1 from "@/assets/interior-231640.jpg";
 import img3 from "@/assets/interior-231708.jpg";
 import img5 from "@/assets/interior-231820.jpg";
-import img6 from "@/assets/interior-231831.jpg";
-import img8 from "@/assets/interior-231901.jpg";
-import img12 from "@/assets/interior-232032.jpg";
 
 import { useReveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -466,8 +463,6 @@ function Index() {
               Estimate Cost
             </Link>
           </div>
-          {/* unused vars referenced so tree-shake keeps imports tidy */}
-          <span className="hidden">{img6.length}{img8.length}{img12.length}</span>
         </div>
       </section>
     </>
